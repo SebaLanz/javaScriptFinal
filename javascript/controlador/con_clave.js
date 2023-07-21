@@ -98,8 +98,10 @@ class Controlador extends Clave {
     const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
     let lastID = parseInt(localStorage.getItem("lastID"));//Obtengo el id 0
     if (lastID === 0) {
-      const numeroItem = document.createElement("li");
-      numeroItem.textContent = 'hello kitty';
+      const numeroItem = document.createElement("p");
+      numeroItem.innerHTML = `En el sistema, no hay claves almacenadas.<br>
+                              Deberá generar nuevas claves!!! 
+                              &#128517; `;
       numerosLista.appendChild(numeroItem);
     }
     modal.show();
