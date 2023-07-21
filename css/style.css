@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c6c8c9;
+}
+
+form {
+  width: 550px;
+  height: 330px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form h1 {
+  color: #000000;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+form div label {
+  color: #000000;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form .contenido label {
+  margin-bottom: 20px;
+}
+form .contenido input {
+  margin-bottom: 20px;
+}
+form button {
+  border: solid black 1px !important;
+  width: 150px;
+  color: #000000 !important;
+  transition: 0.7s;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+form #idBtnGenerarClave {
+  background-color: #1bbbd4 !important;
+}
+form #idBtnMostrarClaves {
+  background-color: #2bd51f !important;
+}
+form #idBtnBorrarClaves {
+  background-color: rgba(239, 76, 76, 0.9921568627) !important;
+}
+form button:hover {
+  background-color: #50e7ce !important;
+  transition: 0.7s;
+  color: rgb(36, 36, 36) !important;
+}
+form div input {
+  width: 250px !important;
+}/*# sourceMappingURL=style.css.map */
