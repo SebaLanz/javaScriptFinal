@@ -266,7 +266,7 @@ body {
             }
         }
     }
-    @media (max-width: 576px) {
+    @media (max-width: 616px) {
         //claves
         .form-container {
             display: flex; /* Utilizamos flexbox */
@@ -310,7 +310,7 @@ body {
             }
         }
     }
-    @media (min-width: 577px) and (max-width: 768px) {
+    @media (min-width: 617px) and (max-width: 768px) {
         .form-container {
             display: flex; /* Utilizamos flexbox */
             align-items: center; /* Centramos verticalmente */
