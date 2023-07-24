@@ -4,7 +4,7 @@ const objClave = new Controlador();
 const objCantidad = new Controlador();
 const sweetBtn = new SweetAlert();
 
-let arrayLi = [];
+let arrayLi = []; //Acá después almaceno las claves generadas.
 document.getElementById("idBtnGenerarClave").addEventListener("click", function(event) {
     event.preventDefault();
     crearClaves();

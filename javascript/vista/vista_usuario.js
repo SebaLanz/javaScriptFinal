@@ -33,5 +33,5 @@ const generarUsuario = async () => {
 
 
 //crear un evento
-document.addEventListener('DOMContentLoaded', generarUsuario);
+//document.addEventListener('DOMContentLoaded', generarUsuario);
 boton.addEventListener('click', generarUsuario);
