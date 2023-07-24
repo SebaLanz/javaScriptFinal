@@ -216,39 +216,43 @@ body {
         background-color: #2bd51f;
         transition: $transicion;
     }
-    @media (max-width: 535px) {
+    @media (max-width: 560px) {
         //claves
         .form-container{
             margin: 5px 0;          
             form{
                 width: 85% !important;
-                height: 75% !important;
+                height: 85% !important;
                 .div{
                     margin-top: 20px;
                     display: flex !important;
                     flex-direction: column !important;
                     align-items: center !important;
                     padding-right: 25px !important;
-                    h4{
-                        
-                    }
                 }
                 .btns{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     button{
-                        width: px !important;
+                        width: 130px !important;
                         font-size: 15px;
                     }                
                 }
+                .contenido{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input{
+                        margin: 0;
+                    }
+                }
             }
         }
-        
         //usuarios
         .contenedor {
-            width: 90%;
-            height: 90%;
+            height: 100vh !important;
+            margin-bottom: 10%;
             .lugar_foto{
                 display: flex;
                 justify-content: center;
@@ -260,11 +264,14 @@ body {
                 }
             }
             .datos{
+                margin: 0;
+                padding: 0;
                 p{
                     font-size: 17px;
                 }
             }
         }
+    
     }
     @media (max-width: 616px) {
         //claves
