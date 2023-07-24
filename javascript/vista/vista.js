@@ -21,7 +21,7 @@ document.getElementById("idBtnBorrarClaves").addEventListener("click",function(e
     event.preventDefault();  
     //Consultar si hay datos en el localstore
     let lastID = parseInt(localStorage.getItem("lastID"));
-    if (lastID === 0) {
+    if (localStorage.length === 0 || lastID === 0) {
         sweetBtn.sinDatosAlert();
     }else{
         sweetBtn.borrarContenidoAlerta();
@@ -91,7 +91,7 @@ const crearClaves = () => {
         const mensajeInvalido = document.createElement("p");
         //Al utilizar innerHTML, puedo utilizar etiquetas como <BR>
         mensajeInvalido.innerHTML = `
-                                    Ingresó: "<b style="color:red">${txtError}</b>".<br>
+                                    Ingresó: "<b style="color:red !important">${txtError}</b>".<br>
                                     El valor ingresado, no es válido para generar claves aleatorias, intente nuevamente.`;
         numerosLista.appendChild(mensajeInvalido);
 

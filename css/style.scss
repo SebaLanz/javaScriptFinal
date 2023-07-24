@@ -58,8 +58,8 @@ body {
     justify-content: center; /* Centramos horizontalmente */
     height: 90%;
         form {
-            width: 30%;
-            height: 35%;
+            width: 35%;
+            height: 300px;
             padding: 20px;
             background: #ffffff;
             border-radius: 4px;
@@ -180,9 +180,11 @@ body {
         color: aliceblue;
         padding: 5px;
     }
-    p {
-    font-size: 23px;
-    color: #1d5fe2;
+    .datos{
+        p {
+            font-size: 23px;
+            color: #1d5fe2;
+        }
     }
 
     h2 span,
@@ -214,10 +216,270 @@ body {
         background-color: #2bd51f;
         transition: $transicion;
     }
-    
-    @media (max-width: 600px) {
+    @media (max-width: 535px) {
+        //claves
+        .form-container{
+            margin: 5px 0;          
+            form{
+                width: 85% !important;
+                height: 75% !important;
+                .div{
+                    margin-top: 20px;
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                    padding-right: 25px !important;
+                    h4{
+                        
+                    }
+                }
+                .btns{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button{
+                        width: px !important;
+                        font-size: 15px;
+                    }                
+                }
+            }
+        }
+        
+        //usuarios
         .contenedor {
             width: 90%;
+            height: 90%;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+            .datos{
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        //claves
+        .form-container {
+            display: flex; /* Utilizamos flexbox */
+            align-items: center; /* Centramos verticalmente */
+            justify-content: center; /* Centramos horizontalmente */
+            height: 90%;
+                form {
+                    width: 92%;
+                    height: 45%;
+                    padding: 20px;
+                    background: #ffffff;
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .btns{
+                        button{
+                            width: 133px;
+                        }
+                    }
+                }
+        }
+        //usuarios
+        .contenedor {
+            width: 90%;
+            height: 80%;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .datos{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media (min-width: 577px) and (max-width: 768px) {
+        .form-container {
+            display: flex; /* Utilizamos flexbox */
+            align-items: center; /* Centramos verticalmente */
+            justify-content: center; /* Centramos horizontalmente */
+            height: 90%;
+                form {
+                    width: 80%;
+                    height: 45%;
+                    padding: 20px;
+                    background: #ffffff;
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .btns{
+                        button{
+                            width: 133px;
+                        }
+                    }
+                }
+        }
+        //usuarios
+        .contenedor {
+            width: 70%;
+            height: 80%;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .datos{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media (min-width: 769px) and (max-width: 992px) {
+        .form-container {
+            display: flex; /* Utilizamos flexbox */
+            align-items: center; /* Centramos verticalmente */
+            justify-content: center; /* Centramos horizontalmente */
+            height: 90%;
+                form {
+                    width: 65%;
+                    height: 45%;
+                    padding: 20px;
+                    background: #ffffff;
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .btns{
+                        button{
+                            width: 133px;
+                        }
+                    }
+                }
+        }
+        //usuarios
+        .contenedor {
+            width: 55%;
+            height: 80%;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .datos{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media (min-width: 993px) and (max-width: 1200px) {
+        .form-container {
+            display: flex; /* Utilizamos flexbox */
+            align-items: center; /* Centramos verticalmente */
+            justify-content: center; /* Centramos horizontalmente */
+            height: 90%;
+                form {
+                    width: 45%;
+                    height: 45%;
+                    padding: 20px;
+                    background: #ffffff;
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .btns{
+                        button{
+                            width: 133px;
+                        }
+                    }
+                }
+        }
+        //usuarios
+        .contenedor {
+            width: 45%;
+            height: 80%;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .datos{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1201px) and (max-width: 1900px) {
+        .form-container {
+            display: flex; /* Utilizamos flexbox */
+            align-items: center; /* Centramos verticalmente */
+            justify-content: center; /* Centramos horizontalmente */
+            height: 90%;
+                form {
+                    width: 45%;
+                    height: 45%;
+                    padding: 20px;
+                    background: #ffffff;
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .btns{
+                        button{
+                            width: 133px;
+                        }
+                    }
+                }
+        }
+        //usuarios
+        .contenedor {
+            width: 40%;
+            height: 75  vh;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 135px;
+                    height: 135px;
+                }
+            }
+            .datos{
+                p{
+                    font-size: 18px;
+                }
+            }
         }
     }
 }

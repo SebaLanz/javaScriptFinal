@@ -39,8 +39,8 @@ body .form-container {
   height: 90%;
 }
 body .form-container form {
-  width: 30%;
-  height: 35%;
+  width: 35%;
+  height: 300px;
   padding: 20px;
   background: #ffffff;
   border-radius: 4px;
@@ -151,7 +151,7 @@ body .h1_usuario {
   color: aliceblue;
   padding: 5px;
 }
-body p {
+body .datos p {
   font-size: 23px;
   color: #1d5fe2;
 }
@@ -183,8 +183,235 @@ body button:hover {
   background-color: #2bd51f;
   transition: 0.7s;
 }
-@media (max-width: 600px) {
+@media (max-width: 535px) {
+  body .form-container {
+    margin: 5px 0;
+  }
+  body .form-container form {
+    width: 85% !important;
+    height: 75% !important;
+  }
+  body .form-container form .div {
+    margin-top: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-right: 25px !important;
+  }
+  body .form-container form .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: px !important;
+    font-size: 15px;
+  }
   body .contenedor {
     width: 90%;
+    height: 90%;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 90px;
+    height: 90px;
+  }
+  body .contenedor .datos p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 576px) {
+  body .form-container {
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 90%;
+  }
+  body .form-container form {
+    width: 92%;
+    height: 45%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 133px;
+  }
+  body .contenedor {
+    width: 90%;
+    height: 80%;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 100px;
+    height: 100px;
+  }
+  body .contenedor .datos p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  body .form-container {
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 90%;
+  }
+  body .form-container form {
+    width: 80%;
+    height: 45%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 133px;
+  }
+  body .contenedor {
+    width: 70%;
+    height: 80%;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 100px;
+    height: 100px;
+  }
+  body .contenedor .datos p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  body .form-container {
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 90%;
+  }
+  body .form-container form {
+    width: 65%;
+    height: 45%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 133px;
+  }
+  body .contenedor {
+    width: 55%;
+    height: 80%;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 100px;
+    height: 100px;
+  }
+  body .contenedor .datos p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  body .form-container {
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 90%;
+  }
+  body .form-container form {
+    width: 45%;
+    height: 45%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 133px;
+  }
+  body .contenedor {
+    width: 45%;
+    height: 80%;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 100px;
+    height: 100px;
+  }
+  body .contenedor .datos p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1900px) {
+  body .form-container {
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 90%;
+  }
+  body .form-container form {
+    width: 45%;
+    height: 45%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 133px;
+  }
+  body .contenedor {
+    width: 40%;
+    height: 75 vh;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 135px;
+    height: 135px;
+  }
+  body .contenedor .datos p {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
