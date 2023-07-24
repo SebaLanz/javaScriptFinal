@@ -12,79 +12,213 @@ $btn_color_texto: #000000;
 
 
 //Variables Espacios
-$padding_h3:15px;
+$padding_h1:15px;
 $padding_bot_texto:10px;
 
 
 //Variable letras
 $font_family:Verdana, Geneva, Tahoma, sans-serif;
+
+//Variable tiempo
+$transicion: 0.7s;
+
 body {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     background-color: #c6c8c9;
-}
-form {
-    width: 550px;
-    height: 330px;
+    //Nav
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #b72020 !important;
+        padding: 10px;
+        div{
+            display: flex !important;
+            align-items: center !important;
+            justify-content: left !important;
+            a{
+                color: white;
+                transition:$transicion;
+            }
+            a:hover{
+                color: #4fd06f;
+                transition:$transicion;
+            }
+        }
+    }
+    //Fin nav
+     //Centrar el formulario
+    .form-container {
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 90%;
+        form {
+            width: 30%;
+            height: 35%;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //Generador de clave
+            h1{
+                color: $color_texto;
+                padding-bottom: $padding_h1;
+                margin-top: 20px;
+                font-size: 2rem;
+            }
+            //div -> label
+            div label{
+                color: $color_texto;
+                font-family: $font_family;
+                padding-bottom: $padding_bot_texto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .contenido{
+                align-items: center;
+                
+                label{
+                    margin-bottom: 20px;
+                }
+                input{
+                    margin-bottom: 20px;
+                    margin-left: 18%;
+                    height: 40px;
+                    text-align: center;
+                }
+                h4{
+                    margin-bottom: 20px;
+                }
+            }
+            //btn-generar
+            button{
+                //background-color: $btn_color !important;
+                border: $btn_borde !important;
+                width: $btn_width;
+                color: $btn_color_texto !important;
+                transition: 0.7s;
+                margin-bottom: 15px;
+                margin-right: 15px;
+            }
+            #idBtnGenerarClave{
+                background-color: #1ecae4 !important;
+            }
+            #idBtnGenerarClave:hover{
+                background-color: #50e7ce !important;
+                transition:$transicion;
+                color: rgb(36, 36, 36) !important;
+                width: 160px;
+                border: solid 1.5px black !important;
+            }
+            #idBtnMostrarClaves{
+                background-color: #2bd51f !important ;
+            }
+            #idBtnMostrarClaves:hover{
+                background-color: #4eff41 !important;
+                transition:$transicion;
+                color: rgb(36, 36, 36) !important;
+                width: 160px;
+            }
+            #idBtnBorrarClaves{
+                background-color: #ef4c4cfd !important;
+            }
+            #idBtnBorrarClaves:hover{
+                background-color: #ff6d6dfd !important;
+                transition:$transicion;
+                color: rgb(36, 36, 36) !important;
+                width: 160px;
+            }
+            div input{
+                width: 250px !important;
+            }
+        }
+    }
+    //Inicio Form
+    
+    //Fin form
+    //Usuario estilos.
+    .contenedor {
+    width: 30%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    margin-top: 50px;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //Generador de clave
-    h1{
-        color: $color_texto;
-        padding-bottom: $padding_h3;
-        margin-top: 20px;
+    box-shadow: 2px 2px 7px rgb(187, 198, 214);
+    border-radius: 10px;
+        .lugar_foto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .encabezado{
+            text-align: center;
+            padding-bottom: 20px;
+            h2{
+                display: flex;
+                align-items: center;    
+                text-align: center;
+                font-size: 25px;   
+                color: #1d5fe2;                 
+            }
+        }
+    }
+    .h1_usuario{     
+        background: linear-gradient(to right, #1d5fe2, rgb(0, 179, 255));
+        margin: 0px;
+        text-align: center;
+        color: aliceblue;
+        padding: 5px;
+    }
+    p {
+    font-size: 23px;
+    color: #1d5fe2;
     }
 
-    //div -> label
-    div label{
-        color: $color_texto;
-        font-family: $font_family;
-        padding-bottom: $padding_bot_texto;
+    h2 span,
+    p span {
+        color: #000000;
+        font-size: 20px;
+    }
+
+    img {
+        border-radius: 60%;
+        width: 130px;
+        height: 130px;
+    }
+    .boton{
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
     }
-    .contenido{
-        
-        label{
-            margin-bottom: 20px;
-        }
-        input{
-            margin-bottom: 20px;
-        }
-    }
-    //btn-generar
     button{
-        //background-color: $btn_color !important;
-        border: $btn_borde !important;
-        width: $btn_width;
-        color: $btn_color_texto !important;
-        transition: 0.7s;
-        margin-bottom: 15px;
-        margin-right: 15px;
-    }
-    #idBtnGenerarClave{
-        background-color: $btn_color !important;
-    }
-    #idBtnMostrarClaves{
-        background-color: #2bd51f !important ;
-    }
-    #idBtnBorrarClaves{
-        background-color: #ef4c4cfd !important;
+        width: 150px;
+        height: 48px;
+        border-radius: 15px;
+        border: none;
+        background-color: #4eff41;
+        transition: $transicion;
     }
     button:hover{
-        background-color: #50e7ce !important;
-        transition: 0.7s;
-        color: rgb(36, 36, 36) !important;
+        cursor: pointer;
+        background-color: #2bd51f;
+        transition: $transicion;
     }
-    div input{
-        width: 250px !important;
+    
+    @media (max-width: 600px) {
+        .contenedor {
+            width: 90%;
+        }
     }
 }
 

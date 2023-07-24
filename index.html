@@ -10,42 +10,50 @@
     <title>Generador de Claves</title>
 </head>
 <body>
-
-
-<form id="formulario">
-  <h1 id="titulo">Generador de claves</h1>
-  <div class="mb-3 contenido">
-      <label for="exampleInputEmail1" class="form-label">Cantidad de claves a generar</label>
-      <input id="TxtCantidad" type="text" class="form-control" required>
-  </div>
-  <div class="btns">
-      <button id="idBtnGenerarClave" type="submit" class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">Generar Clave</button>
-      <button id="idBtnMostrarClaves" class="btn btn-primary">Mostrar Claves</button>
-      <button id="idBtnBorrarClaves" class="btn btn-primary">Borrar Claves</button>
-  </div>
-</form>
-
-
-
-<!-- Modal del botón crear clave -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Sistema de Claves Aleatorias.</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!--Nav-->
+  <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="./index.html">Generar Claves</a>
+      <a class="navbar-brand" href="./paginas/generarUsuarios.html">Generar Usuarios</a>
+    </div>
+  </nav>
+  <h1 class="h1_usuario">Generador de Claves Aleatorias</h1>
+  <!--Fin nav-->
+  <div class="form-container">
+    <form id="formulario">
+      <!-- <h1 id="titulo">Generador de claves aleatorias</h1> -->
+      <h1></h1>
+      <div class="mb-3 contenido">
+          <h4 for="exampleInputEmail1" class="form-label">Ingrese la cantidad de claves a generar</h4>
+          <input id="TxtCantidad" type="text" class="form-control" placeholder="Ingrese la cantidad..." >
       </div>
-      <div class="modal-body">        
-          <ol id="numeros-lista"></ol>
-          <ul id="error-modal"></ul>
+      <div class="btns">
+          <button id="idBtnGenerarClave" type="submit" class="btn btn-primary" data-bs-target="#exampleModal" data-bs-toggle="modal">Generar Clave</button>
+          <button id="idBtnMostrarClaves" class="btn btn-primary">Mostrar Claves</button>
+          <button id="idBtnBorrarClaves" class="btn btn-primary">Borrar Claves</button>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+    </form>
+  </div>
+
+  <!-- Modal del botón crear clave -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sistema de Claves Aleatorias.</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">        
+            <ol id="numeros-lista"></ol>
+            <ul id="error-modal"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- FIN DEL Modal del botón crear clave -->
+  <!-- FIN DEL Modal del botón crear clave -->
 
 <!--Librerías-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

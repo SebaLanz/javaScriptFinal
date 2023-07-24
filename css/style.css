@@ -5,16 +5,42 @@
 }
 
 body {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
   background-color: #c6c8c9;
 }
-
-form {
-  width: 550px;
-  height: 330px;
+body nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b72020 !important;
+  padding: 10px;
+}
+body nav div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: left !important;
+}
+body nav div a {
+  color: white;
+  transition: 0.7s;
+}
+body nav div a:hover {
+  color: #4fd06f;
+  transition: 0.7s;
+}
+body .form-container {
+  display: flex; /* Utilizamos flexbox */
+  align-items: center; /* Centramos verticalmente */
+  justify-content: center; /* Centramos horizontalmente */
+  height: 90%;
+}
+body .form-container form {
+  width: 30%;
+  height: 35%;
   padding: 20px;
   background: #ffffff;
   border-radius: 4px;
@@ -22,12 +48,13 @@ form {
   flex-direction: column;
   align-items: center;
 }
-form h1 {
+body .form-container form h1 {
   color: #000000;
   padding-bottom: 15px;
   margin-top: 20px;
+  font-size: 2rem;
 }
-form div label {
+body .form-container form div label {
   color: #000000;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding-bottom: 10px;
@@ -35,13 +62,22 @@ form div label {
   flex-direction: column;
   align-items: center;
 }
-form .contenido label {
+body .form-container form .contenido {
+  align-items: center;
+}
+body .form-container form .contenido label {
   margin-bottom: 20px;
 }
-form .contenido input {
+body .form-container form .contenido input {
+  margin-bottom: 20px;
+  margin-left: 18%;
+  height: 40px;
+  text-align: center;
+}
+body .form-container form .contenido h4 {
   margin-bottom: 20px;
 }
-form button {
+body .form-container form button {
   border: solid black 1px !important;
   width: 150px;
   color: #000000 !important;
@@ -49,20 +85,106 @@ form button {
   margin-bottom: 15px;
   margin-right: 15px;
 }
-form #idBtnGenerarClave {
-  background-color: #1bbbd4 !important;
+body .form-container form #idBtnGenerarClave {
+  background-color: #1ecae4 !important;
 }
-form #idBtnMostrarClaves {
-  background-color: #2bd51f !important;
-}
-form #idBtnBorrarClaves {
-  background-color: rgba(239, 76, 76, 0.9921568627) !important;
-}
-form button:hover {
+body .form-container form #idBtnGenerarClave:hover {
   background-color: #50e7ce !important;
   transition: 0.7s;
   color: rgb(36, 36, 36) !important;
+  width: 160px;
+  border: solid 1.5px black !important;
 }
-form div input {
+body .form-container form #idBtnMostrarClaves {
+  background-color: #2bd51f !important;
+}
+body .form-container form #idBtnMostrarClaves:hover {
+  background-color: #4eff41 !important;
+  transition: 0.7s;
+  color: rgb(36, 36, 36) !important;
+  width: 160px;
+}
+body .form-container form #idBtnBorrarClaves {
+  background-color: rgba(239, 76, 76, 0.9921568627) !important;
+}
+body .form-container form #idBtnBorrarClaves:hover {
+  background-color: rgba(255, 109, 109, 0.9921568627) !important;
+  transition: 0.7s;
+  color: rgb(36, 36, 36) !important;
+  width: 160px;
+}
+body .form-container form div input {
   width: 250px !important;
+}
+body .contenedor {
+  width: 30%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  margin-top: 50px;
+  padding: 20px;
+  box-shadow: 2px 2px 7px rgb(187, 198, 214);
+  border-radius: 10px;
+}
+body .contenedor .lugar_foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+body .contenedor .encabezado {
+  text-align: center;
+  padding-bottom: 20px;
+}
+body .contenedor .encabezado h2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  color: #1d5fe2;
+}
+body .h1_usuario {
+  background: linear-gradient(to right, #1d5fe2, rgb(0, 179, 255));
+  margin: 0px;
+  text-align: center;
+  color: aliceblue;
+  padding: 5px;
+}
+body p {
+  font-size: 23px;
+  color: #1d5fe2;
+}
+body h2 span,
+body p span {
+  color: #000000;
+  font-size: 20px;
+}
+body img {
+  border-radius: 60%;
+  width: 130px;
+  height: 130px;
+}
+body .boton {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+body button {
+  width: 150px;
+  height: 48px;
+  border-radius: 15px;
+  border: none;
+  background-color: #4eff41;
+  transition: 0.7s;
+}
+body button:hover {
+  cursor: pointer;
+  background-color: #2bd51f;
+  transition: 0.7s;
+}
+@media (max-width: 600px) {
+  body .contenedor {
+    width: 90%;
+  }
 }/*# sourceMappingURL=style.css.map */

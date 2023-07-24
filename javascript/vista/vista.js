@@ -10,7 +10,6 @@ document.getElementById("idBtnGenerarClave").addEventListener("click", function(
     crearClaves();
 });
 
- 
 
 document.getElementById("idBtnMostrarClaves").addEventListener("click", function(event) {
     event.preventDefault();
@@ -20,7 +19,14 @@ document.getElementById("idBtnMostrarClaves").addEventListener("click", function
 
 document.getElementById("idBtnBorrarClaves").addEventListener("click",function(event){
     event.preventDefault();  
-    sweetBtn.borrarContenidoAlerta();
+    //Consultar si hay datos en el localstore
+    let lastID = parseInt(localStorage.getItem("lastID"));
+    if (lastID === 0) {
+        sweetBtn.sinDatosAlert();
+    }else{
+        sweetBtn.borrarContenidoAlerta();
+    }
+    
 }); 
 
 
