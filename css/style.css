@@ -225,7 +225,7 @@ body button:hover {
     font-size: 17px;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 616px) {
   body .form-container {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
@@ -263,7 +263,7 @@ body button:hover {
     font-size: 18px;
   }
 }
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 617px) and (max-width: 768px) {
   body .form-container {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
@@ -301,7 +301,7 @@ body button:hover {
     font-size: 18px;
   }
 }
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 1098px) {
   body .form-container {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
@@ -339,7 +339,7 @@ body button:hover {
     font-size: 18px;
   }
 }
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 1099px) and (max-width: 1200px) {
   body .form-container {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
