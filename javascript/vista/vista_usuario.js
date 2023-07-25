@@ -9,6 +9,9 @@ const foto = document.querySelector('#foto');
 const ciudad = document.querySelector('#ciudad');
 const pais = document.querySelector('#pais');
 
+//Evento de click y llamo a la función de generar usuario que consulta la api "https://randomuser.me/api/".
+boton.addEventListener('click', generarUsuario);
+
 const generarUsuario = async () => {
     //consultar a la API
     const url = 'https://randomuser.me/api/';
@@ -16,12 +19,14 @@ const generarUsuario = async () => {
     const { results } = await respuesta.json();
     const datos = results[0];
 
+    //Asignar valores a los txt.
     foto.src = datos.picture.medium;
     nombre.value = datos.name.first;
     apellido.value = datos.name.last;
     usuario.value = datos.login.username;
     correo.value = datos.email;
     telefono.value = datos.phone;
+    //Cambio los generos a "español".
     if (datos.value ==='male'){
         genero.value = 'Hombre';
     } else {
@@ -31,5 +36,4 @@ const generarUsuario = async () => {
     pais.value = datos.location.country;
 }
 
-//crear un evento
-boton.addEventListener('click', generarUsuario);
+

@@ -3,20 +3,15 @@ import Clave from '../modelo/clave.js';//Me traigo las propiedades y métodos de
 class Controlador extends Clave {
   
   clave_generada = '';
-  //Creo la funcion "validar_longitud".
+  //Función para validar la longitud de cada clave.
   validar_longitud = (longitud_clave) => { 
-
     //Instancio un objeto de tipo Controlador que hereda los métodos de Clave
     const obgValidador = new Controlador();
-
     /*Ejecuto la función "validarNumeroEntero" con el objeto "claveValida". La función está heredada de la clase "Clave".
     Realizo las validaciones correspondientes.
-
     1) !claveValida.validarNumeroEntero(longitud_clave) = al negar la función (no se cumple), estoy diciendo que no es un número entero.
     2) longitud_clave == '' = si se cumple, ESTÁ VACÍO.
     3) !Number(longitud_clave) = si se cumple, NO ES UN NÚMERO.*/
-    
-
     try {
       if ((!obgValidador.validarNumeroEntero(longitud_clave) || longitud_clave == '' || !Number(longitud_clave))){
         if (longitud_clave == ''){
@@ -49,7 +44,7 @@ class Controlador extends Clave {
       return 'Error sin validar en Controlador';
     }   
   }
-
+  //Función para validar la cantidad de claves a generar.
   validar_cantidad_claves = (cantidad) => {
     const obgValidador = new Controlador();
     try {
@@ -74,8 +69,6 @@ class Controlador extends Clave {
     }   
   }
   
-  
-
   mostrarClaves = () => {
     const errorModal = document.getElementById("error-modal");
     errorModal.innerHTML = ""; // Limpio el contenido previo del modal (del error).
@@ -83,20 +76,17 @@ class Controlador extends Clave {
     const jsonClavesParseado = localStorage.getItem("arrayClaves");
     // Convertir el JSON a un array de objetos
     const todasLasClaves = JSON.parse(jsonClavesParseado);
-
     let numerosLista = document.getElementById("numeros-lista");
-    numerosLista.innerHTML = ""; // Limpiar la lista antes de agregar las claves
-
+    numerosLista.innerHTML = ""; // Limpio la lista antes de agregar las claves
     // Recorrer el array de claves obtenido del localStorage
     todasLasClaves.forEach((claveObj) => {
         const numeroItem = document.createElement("li");
         numeroItem.textContent = claveObj.clave;
         numerosLista.appendChild(numeroItem);
     });
-
     // Mostrar el modal
     const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
-    let lastID = parseInt(localStorage.getItem("lastID"));//Obtengo el id 0
+    let lastID = parseInt(localStorage.getItem("lastID"));//Obtengo el id 0, si es 0, está vacío el localStore.
     if (lastID === 0) {
       const numeroItem = document.createElement("p");
       numeroItem.innerHTML = `En el sistema, no hay claves almacenadas.<br>
@@ -105,10 +95,6 @@ class Controlador extends Clave {
       numerosLista.appendChild(numeroItem);
     }
     modal.show();
-}
-
-
-  
-
+  }
 }
 export default Controlador;//Exporto la clase "Controlador"

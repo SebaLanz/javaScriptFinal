@@ -1,16 +1,9 @@
 import Controlador from '../controlador/con_clave.js';//Me traigo las propiedades y métodos de "Clave".
-const objCantidad = new Controlador();
-const obgValidador = new Controlador();
+const objCantidad = new Controlador();//Utilizo el obj para validar número entero.
+
 class SweetAlert {
 
-//sweetalert de Error
-    errorAlert = () => {
-        Swal.fire({
-            icon: 'error',
-            title: 'El valor ingresado no es correcto.'
-        });
-    }
-
+    //Alerta para eliminar el localstore.
     borrarContenidoAlerta = () => {
         Swal.fire({
         title: 'Contraseñas eliminadas',
@@ -18,19 +11,17 @@ class SweetAlert {
         text: 'Todas las contraseñas almacenadas han sido eliminadas.',
         confirmButtonText: 'Aceptar'
         });
-        //const numerosLista = document.getElementById("numeros-lista");
-        //numerosLista.innerHTML = "";
         //Vacío el localStorage.
         localStorage.clear();
-        // Si no hay datos en el localStorage, no me abre el modal vacío de "mostrar claves".
-        // Entonces, genero un array vacío, para que se muestre el modal sin datos.
+        /*Si no hay datos en el localStorage, no me abre el modal vacío de "mostrar claves".
+        Entonces, genero un array vacío, para que se muestre el modal sin datos.*/
         const jsonClavesParseado = localStorage.getItem("arrayClaves");
         if (!jsonClavesParseado) {
             localStorage.setItem("arrayClaves", "[]");
             localStorage.setItem("lastID", "0");
         }
     }
-
+    //Alerta que arroja si quiero vaciar el local y ya se encuentra vacío.
     sinDatosAlert = () => {
         Swal.fire({
             title: 'Oops...',
@@ -38,61 +29,8 @@ class SweetAlert {
             icon: 'warning',
         })
     }
-
-    
-    async solicitarNumero () {
-        const result = await Swal.fire({
-        title: '<h4>Ingrese logitud de clave, mínimo 7 máximo 20</h4>',
-        input: 'text',
-        inputAttributes: {
-            min: 0,
-            step: 1
-        },
-        showCancelButton: true,
-        confirmButtonText: 'Aceptar',
-        cancelButtonText: 'Cancelar',
-        showLoaderOnConfirm: true,
-        allowOutsideClick: false
-        });
-    
-        if (result.isConfirmed) {
-        const numeroIngresado = result.value;
-        if (numeroIngresado !== undefined) {
-            return numeroIngresado;
-        }
-        }else {
-        return null; // Si se cancela, devuelve null
-        }
-    }
-
-    async  solicitarNumero2() {
-        const result = await Swal.fire({
-            title: '<h4>Ingrese longitud de clave, mínimo 7 máximo 20</h4>',
-            input: 'number',
-            inputAttributes: {
-                min: 7,
-                max: 20,
-                step: 1
-            },
-            showCancelButton: true,
-            confirmButtonText: 'Aceptar',
-            cancelButtonText: 'Cancelar',
-            allowOutsideClick: false,
-            inputValidator: (value) => {
-                if (!value || value < 7 || value > 20) {
-                    return 'Debes ingresar un número válido entre 7 y 20.';
-                }
-            }
-        });
-    
-        if (result.isConfirmed) {
-            return result.value;
-        } else {
-            return null; // Si se cancela, devuelve null
-        }
-    }
-
-    async solicitarNumero3() {
+    //Alerta la cual reemplaza el prompt, la utilizo para pedir la longitud de cada clave.
+    async solicitarNumero() {
         const result = await Swal.fire({
             title: '<h4>Ingrese longitud de clave, mínimo 7 máximo 20</h4>',
             input: 'number',
@@ -107,26 +45,29 @@ class SweetAlert {
             allowOutsideClick: false,
             inputValidator: (value) => {
                 // Convertir el valor ingresado a un entero
-                const numeroIngresado = parseInt(value);
-    
-                // Validar si el valor ingresado no es un número válido
+                const numeroIngresado = parseFloat(value);
+                // Valido si es una letra, menor a 7 o mayor a 7.
                 if (isNaN(numeroIngresado) || numeroIngresado < 7 || numeroIngresado > 20) {
                     if (isNaN(numeroIngresado)) {
-                        return `Valor inválido!!!`;
+                        return `Valor inválido, no ingresó un número.`;//ingresa letras, caracteres.
                     }else{
-                    return `Valor inválido, ingresó: ${numeroIngresado}`;
+                        return `Valor inválido, ingresó: ${numeroIngresado} `;//Ingresa 0 (cero)
+                    }
+                }
+                else{
+                    //Acá ya es un número el valor ingresado, pero si entra al IF, es un número con decimales.
+                    if(objCantidad.validarNumeroEntero(numeroIngresado) === false ) {
+                        return `El número debe ser entero, ingresó: ${numeroIngresado} `;//Ingresa números con decimales
                     }
                 }
             }
         });
-    
         if (result.isConfirmed) {
-            // Convertir el valor ingresado a un entero antes de devolverlo
+            // Convierto el valor en un entero y retorno el valor ingresado, el cual cumple todas las restricciones.
             return parseInt(result.value);
         } else {
-            return null; // Si se cancela, devuelve null
+            return null; // Si se cancela, devuelve null (msj: imitió ingresar valor).
         }
     }  
-
 }
 export default SweetAlert;
