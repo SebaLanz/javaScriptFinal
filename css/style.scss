@@ -216,6 +216,41 @@ body {
         background-color: #2bd51f;
         transition: $transicion;
     }
+    @media (max-width: 230px) {
+        //claves
+        .form-container{
+            margin: 5px 0;          
+            form{
+                width: 85% !important;
+                height: 85% !important;
+                .div{
+                    margin-top: 20px;
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                    padding-right: 25px !important;
+                }
+                .btns{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button{
+                        width: 130px !important;
+                        font-size: 15px;
+                    }                
+                }
+                .contenido{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width: 560px) {
         //claves
         .form-container{
@@ -299,7 +334,7 @@ body {
         //usuarios
         .contenedor {
             width: 90%;
-            height: 80%;
+            height: 70% !important;
             .lugar_foto{
                 display: flex;
                 justify-content: center;

@@ -183,6 +183,39 @@ body button:hover {
   background-color: #2bd51f;
   transition: 0.7s;
 }
+@media (max-width: 230px) {
+  body .form-container {
+    margin: 5px 0;
+  }
+  body .form-container form {
+    width: 85% !important;
+    height: 85% !important;
+  }
+  body .form-container form .div {
+    margin-top: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-right: 25px !important;
+  }
+  body .form-container form .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 130px !important;
+    font-size: 15px;
+  }
+  body .form-container form .contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .contenido input {
+    margin: 0;
+  }
+}
 @media (max-width: 560px) {
   body .form-container {
     margin: 5px 0;
@@ -259,7 +292,7 @@ body button:hover {
   }
   body .contenedor {
     width: 90%;
-    height: 80%;
+    height: 70% !important;
   }
   body .contenedor .lugar_foto {
     display: flex;
