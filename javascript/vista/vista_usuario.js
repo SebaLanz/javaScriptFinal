@@ -17,21 +17,19 @@ const generarUsuario = async () => {
     const datos = results[0];
 
     foto.src = datos.picture.medium;
-    nombre.textContent = datos.name.first;
-    apellido.textContent = datos.name.last;
-    usuario.textContent = datos.login.username;
-    correo.textContent = datos.email;
-    telefono.textContent = datos.phone;
-    if (datos.gender ==='male'){
-        genero.textContent = 'Hombre';
-    }else{
-        genero.textContent = 'Mujer';
+    nombre.value = datos.name.first;
+    apellido.value = datos.name.last;
+    usuario.value = datos.login.username;
+    correo.value = datos.email;
+    telefono.value = datos.phone;
+    if (datos.value ==='male'){
+        genero.value = 'Hombre';
+    } else {
+        genero.value = 'Mujer';
     }
-    ciudad.textContent = datos.location.city;
-    pais.textContent = datos.location.country;
+    ciudad.value = datos.location.city;
+    pais.value = datos.location.country;
 }
 
-
 //crear un evento
-//document.addEventListener('DOMContentLoaded', generarUsuario);
 boton.addEventListener('click', generarUsuario);

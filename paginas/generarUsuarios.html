@@ -20,19 +20,51 @@
     <!--Fin nav-->
     <h1 class="h1_usuario">Generador de Usuarios Aleatorios</h1>
 
-    <div class="contenedor">
+    <div class="contenedor ">
         <div class="lugar_foto">
             <img id="foto" src="../img/silueta.webp" alt="imagen...">
         </div>
-        <div class="datos">
-            <p>Nombre: &nbsp<span id="nombre">Nombre...</span> </p>
-            <p>Apellido:   &nbsp<span id="apellido">Apellido...</span></p>
-            <p>Usuario: <span id="usuario">Usuario...</p>
-            <p>Género: <span id="genero">Género...</p>
-            <p>Correo electrónico: <span id="correo">Correo...</span></p>
-            <p>Celular: <span id="telefono">Celular...</span></p>
-            <p>Nacionalidad: <span id="ciudad">Ciudad</span> - <span id="pais">País</span></p>
+        <div class="datos container mt-5">
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="nombre" placeholder="Nombre...">
+                </div>
+            </div>
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido...">
+                </div>
+            </div>
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="usuario" placeholder="Usuario...">
+                </div>
+            </div>
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="genero" placeholder="Género...">
+                </div>
+            </div>
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="correo" placeholder="Correo...">
+                </div>
+            </div>
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="telefono" placeholder="Celular...">
+                </div>
+            </div>
+            <div class="row mb-3 justify-content-center">
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="ciudad" placeholder="Nacionalidad">
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="pais" placeholder="País">
+                </div>
+            </div>
         </div>
+        
         <div class="boton">
             <button id="boton">Generar Usuario</button>
         </div>
