@@ -251,7 +251,7 @@ body {
         }
         //usuarios
         .contenedor {
-            height: 70% !important;
+            height: 90% !important;
             margin-bottom: 10%;
             .lugar_foto{
                 display: flex;
@@ -279,7 +279,7 @@ body {
             display: flex; /* Utilizamos flexbox */
             align-items: center; /* Centramos verticalmente */
             justify-content: center; /* Centramos horizontalmente */
-            height: 90%;
+            height: 60% !important;
                 form {
                     width: 92%;
                     height: 45%;

@@ -216,7 +216,7 @@ body button:hover {
     margin: 0;
   }
   body .contenedor {
-    height: 70% !important;
+    height: 90% !important;
     margin-bottom: 10%;
   }
   body .contenedor .lugar_foto {
@@ -242,7 +242,7 @@ body button:hover {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
     justify-content: center; /* Centramos horizontalmente */
-    height: 90%;
+    height: 60% !important;
   }
   body .form-container form {
     width: 92%;
