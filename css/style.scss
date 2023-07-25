@@ -216,48 +216,16 @@ body {
         background-color: #2bd51f;
         transition: $transicion;
     }
-    @media (max-width: 230px) {
-        //claves
-        .form-container{
-            margin: 5px 0;          
-            form{
-                width: 85% !important;
-                height: 85% !important;
-                .div{
-                    margin-top: 20px;
-                    display: flex !important;
-                    flex-direction: column !important;
-                    align-items: center !important;
-                    padding-right: 25px !important;
-                }
-                .btns{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    button{
-                        width: 130px !important;
-                        font-size: 15px;
-                    }                
-                }
-                .contenido{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    input{
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-
+ 
     @media (max-width: 560px) {
         //claves
         .form-container{
-            margin: 5px 0;          
+            margin: 5px 0;
+            height: 100% !important;          
             form{
                 width: 85% !important;
-                height: 85% !important;
+                height: 125% !important;
+                margin-top: 100px;
                 .div{
                     margin-top: 20px;
                     display: flex !important;
@@ -286,7 +254,7 @@ body {
         }
         //usuarios
         .contenedor {
-            height: 90% !important;
+            
             margin-bottom: 10%;
             .lugar_foto{
                 display: flex;
@@ -316,8 +284,8 @@ body {
             justify-content: center; /* Centramos horizontalmente */
             height: 60% !important;
                 form {
-                    width: 92%;
-                    height: 45%;
+                    width: 92% !important;
+                    height: 55%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;
@@ -334,7 +302,6 @@ body {
         //usuarios
         .contenedor {
             width: 90%;
-            height: 70% !important;
             .lugar_foto{
                 display: flex;
                 justify-content: center;
