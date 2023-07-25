@@ -1,7 +1,6 @@
 import Controlador from '../controlador/con_clave.js';//Me traigo las propiedades y métodos de "Clave".
 const objCantidad = new Controlador();//Utilizo el obj para validar número entero.
 
-let resultadoAnteriorCorrecto = false;
 class SweetAlert {
 
     //Alerta para eliminar el localstore.
