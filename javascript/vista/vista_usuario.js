@@ -9,8 +9,7 @@ const foto = document.querySelector('#foto');
 const ciudad = document.querySelector('#ciudad');
 const pais = document.querySelector('#pais');
 
-//Evento de click y llamo a la función de generar usuario que consulta la api "https://randomuser.me/api/".
-boton.addEventListener('click', generarUsuario);
+
 
 const generarUsuario = async () => {
     //consultar a la API
@@ -35,5 +34,8 @@ const generarUsuario = async () => {
     ciudad.value = datos.location.city;
     pais.value = datos.location.country;
 }
+
+//Evento de click y llamo a la función de generar usuario que consulta la api "https://randomuser.me/api/".
+boton.addEventListener('click', generarUsuario);
 
 
