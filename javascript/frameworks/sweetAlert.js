@@ -36,5 +36,31 @@ class SweetAlert {
         })
     }
 
+    
+    async solicitarNumero () {
+        const result = await Swal.fire({
+        title: '<h4>Ingrese logitud de clave, mínimo 7 máximo 20</h4>',
+        input: 'text',
+        inputAttributes: {
+            min: 0,
+            step: 1
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        allowOutsideClick: false
+        });
+    
+        if (result.isConfirmed) {
+        const numeroIngresado = result.value;
+        if (numeroIngresado !== undefined) {
+            return numeroIngresado;
+        }
+        }else {
+        return null; // Si se cancela, devuelve null
+        }
+    }
+
 }
 export default SweetAlert;

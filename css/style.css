@@ -216,7 +216,7 @@ body button:hover {
     margin: 0;
   }
   body .contenedor {
-    height: 100vh !important;
+    height: 70% !important;
     margin-bottom: 10%;
   }
   body .contenedor .lugar_foto {

@@ -30,7 +30,7 @@ document.getElementById("idBtnBorrarClaves").addEventListener("click",function(e
 }); 
 
 
-const crearClaves = () => {
+const crearClaves = async () => {
     const errorModal = document.getElementById("error-modal");
     errorModal.innerHTML = ""; // Limpio el contenido previo del modal (del error).
 
@@ -48,12 +48,11 @@ const crearClaves = () => {
         const jsonClavesParseado = localStorage.getItem("arrayClaves");
         if (jsonClavesParseado) {
             todasLasClaves = JSON.parse(jsonClavesParseado); // Si existe, lo convertimos de nuevo a un array
-        }
-        
+        }    
         let lastID = parseInt(localStorage.getItem("lastID")) || 0;
-
         while ( i < cantidad) {
-            longitud_clave[i] = prompt('Ingrese logitud de clave, mínimo 7 máximo 20');
+            //longitud_clave[i] = prompt('Ingrese logitud de clave, mínimo 7 máximo 20');
+            longitud_clave[i] = await sweetBtn.solicitarNumero();
             i++;
         }
         let numerosLista = document.getElementById("numeros-lista");
@@ -65,8 +64,7 @@ const crearClaves = () => {
             numeroItem[i] = document.createElement("li");
             numeroItem[i].textContent = array_de_claves[i];
             numerosLista.appendChild(numeroItem[i]);
-            arrayLi.push(numeroItem[i]);
-            
+            arrayLi.push(numeroItem[i]);     
             // Añadir la clave al array de claves generadas
             todasLasClaves.push({
                 id: lastID,
@@ -76,11 +74,12 @@ const crearClaves = () => {
         // Paso 2: Convertir el array de claves a formato JSON y almacenarlo en el localStorage
         const jsonClavesActualizado = JSON.stringify(todasLasClaves);
         localStorage.setItem("arrayClaves", jsonClavesActualizado);
-
         //Almaceno el último ID para poder ir actualizando el array "arrayClaves" con un id autoincremental.
         localStorage.setItem("lastID", lastID);
-    } else {
-        
+    } else {    
+        //si el Txt no es número válido, abro el modal con el id "exampleModal", función myModal.show();
+        const myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
+        myModal.show();
        // Modificar el contenido del modal para mostrar el mensaje de "valor inválido"
         const numerosLista = document.getElementById("error-modal");
         numerosLista.innerHTML = ""; // Limpiamos el contenido previo del modal
