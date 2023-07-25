@@ -1,6 +1,7 @@
 import Controlador from '../controlador/con_clave.js';//Me traigo las propiedades y métodos de "Clave".
 const objCantidad = new Controlador();//Utilizo el obj para validar número entero.
 
+let resultadoAnteriorCorrecto = false;
 class SweetAlert {
 
     //Alerta para eliminar el localstore.
@@ -63,11 +64,20 @@ class SweetAlert {
             }
         });
         if (result.isConfirmed) {
+            Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3500 // 3 segundos y medio.
+            }).fire({
+                icon: 'success',
+                title: 'Claves generadas exitosamente!!.'
+            });
             // Convierto el valor en un entero y retorno el valor ingresado, el cual cumple todas las restricciones.
-            return parseInt(result.value);
+            return +result.value;
         } else {
             return null; // Si se cancela, devuelve null (msj: imitió ingresar valor).
         }
-    }  
+    }    
 }
 export default SweetAlert;
