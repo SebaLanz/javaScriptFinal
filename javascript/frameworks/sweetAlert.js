@@ -1,3 +1,6 @@
+import Controlador from '../controlador/con_clave.js';//Me traigo las propiedades y métodos de "Clave".
+const objCantidad = new Controlador();
+const obgValidador = new Controlador();
 class SweetAlert {
 
 //sweetalert de Error
@@ -61,6 +64,69 @@ class SweetAlert {
         return null; // Si se cancela, devuelve null
         }
     }
+
+    async  solicitarNumero2() {
+        const result = await Swal.fire({
+            title: '<h4>Ingrese longitud de clave, mínimo 7 máximo 20</h4>',
+            input: 'number',
+            inputAttributes: {
+                min: 7,
+                max: 20,
+                step: 1
+            },
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar',
+            cancelButtonText: 'Cancelar',
+            allowOutsideClick: false,
+            inputValidator: (value) => {
+                if (!value || value < 7 || value > 20) {
+                    return 'Debes ingresar un número válido entre 7 y 20.';
+                }
+            }
+        });
+    
+        if (result.isConfirmed) {
+            return result.value;
+        } else {
+            return null; // Si se cancela, devuelve null
+        }
+    }
+
+    async solicitarNumero3() {
+        const result = await Swal.fire({
+            title: '<h4>Ingrese longitud de clave, mínimo 7 máximo 20</h4>',
+            input: 'number',
+            inputAttributes: {
+                min: 7,
+                max: 20,
+                step: 1
+            },
+            showCancelButton: true,
+            confirmButtonText: 'Aceptar',
+            cancelButtonText: 'Cancelar',
+            allowOutsideClick: false,
+            inputValidator: (value) => {
+                // Convertir el valor ingresado a un entero
+                const numeroIngresado = parseInt(value);
+    
+                // Validar si el valor ingresado no es un número válido
+                if (isNaN(numeroIngresado) || numeroIngresado < 7 || numeroIngresado > 20) {
+                    if (isNaN(numeroIngresado)) {
+                        return `Valor inválido!!!`;
+                    }else{
+                    return `Valor inválido, ingresó: ${numeroIngresado}`;
+                    }
+                }
+            }
+        });
+    
+        if (result.isConfirmed) {
+            // Convertir el valor ingresado a un entero antes de devolverlo
+            return parseInt(result.value);
+        } else {
+            return null; // Si se cancela, devuelve null
+        }
+    }  
 
 }
 export default SweetAlert;

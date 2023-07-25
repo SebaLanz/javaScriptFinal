@@ -52,7 +52,7 @@ const crearClaves = async () => {
         let lastID = parseInt(localStorage.getItem("lastID")) || 0;
         while ( i < cantidad) {
             //longitud_clave[i] = prompt('Ingrese logitud de clave, mínimo 7 máximo 20');
-            longitud_clave[i] = await sweetBtn.solicitarNumero();
+            longitud_clave[i] = await sweetBtn.solicitarNumero3();
             i++;
         }
         let numerosLista = document.getElementById("numeros-lista");
