@@ -230,7 +230,7 @@ body button:hover {
   }
   body .contenedor {
     width: 80%;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
   }
   body .contenedor .lugar_foto {
     display: flex;
@@ -288,7 +288,7 @@ body button:hover {
   }
   body .contenedor {
     width: 70%;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
   }
   body .contenedor .lugar_foto {
     display: flex;
