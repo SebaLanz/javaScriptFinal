@@ -163,7 +163,7 @@ body {
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
     text-align: left;
-    margin-top: 50px;
+    margin-top: 5%;
     padding: 20px;
     box-shadow: 2px 2px 7px rgb(187, 198, 214);
     border-radius: 10px;
@@ -377,7 +377,8 @@ body {
         }
         //usuarios
         .contenedor {
-            width: 90%;
+            width: 80%;
+            margin-bottom: 10%;
             .lugar_foto{
                 display: flex;
                 justify-content: center;
@@ -393,6 +394,9 @@ body {
                     font-size: 18px;
                 }
             }
+        }
+        #pais{
+            margin-bottom: 15px;
         }
     }
     @media (min-width: 617px) and (max-width: 768px) {
@@ -420,7 +424,7 @@ body {
         //usuarios
         .contenedor {
             width: 70%;
-            height: 80%;
+            margin-bottom: 10%;
             .lugar_foto{
                 display: flex;
                 justify-content: center;
@@ -463,7 +467,7 @@ body {
         //usuarios
         .contenedor {
             width: 55%;
-            height: 80%;
+            margin-bottom: 6%;
             .lugar_foto{
                 display: flex;
                 justify-content: center;
@@ -506,7 +510,7 @@ body {
         //usuarios
         .contenedor {
             width: 45%;
-            height: 80%;
+            margin-bottom: 5%;
             .lugar_foto{
                 display: flex;
                 justify-content: center;
@@ -549,7 +553,7 @@ body {
         //usuarios
         .contenedor {
             width: 40%;
-            height: 75  vh;
+            margin-bottom: 5%;
             .lugar_foto{
                 display: flex;
                 justify-content: center;

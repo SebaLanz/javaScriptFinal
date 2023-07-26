@@ -131,7 +131,7 @@ body .contenedor {
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   text-align: left;
-  margin-top: 50px;
+  margin-top: 5%;
   padding: 20px;
   box-shadow: 2px 2px 7px rgb(187, 198, 214);
   border-radius: 10px;
@@ -330,7 +330,8 @@ body button:hover {
     width: 133px;
   }
   body .contenedor {
-    width: 90%;
+    width: 80%;
+    margin-bottom: 10%;
   }
   body .contenedor .lugar_foto {
     display: flex;
@@ -344,6 +345,9 @@ body button:hover {
   }
   body .contenedor .datos p {
     font-size: 18px;
+  }
+  body #pais {
+    margin-bottom: 15px;
   }
 }
 @media (min-width: 617px) and (max-width: 768px) {
@@ -368,7 +372,7 @@ body button:hover {
   }
   body .contenedor {
     width: 70%;
-    height: 80%;
+    margin-bottom: 10%;
   }
   body .contenedor .lugar_foto {
     display: flex;
@@ -406,7 +410,7 @@ body button:hover {
   }
   body .contenedor {
     width: 55%;
-    height: 80%;
+    margin-bottom: 6%;
   }
   body .contenedor .lugar_foto {
     display: flex;
@@ -444,7 +448,7 @@ body button:hover {
   }
   body .contenedor {
     width: 45%;
-    height: 80%;
+    margin-bottom: 5%;
   }
   body .contenedor .lugar_foto {
     display: flex;
@@ -482,7 +486,7 @@ body button:hover {
   }
   body .contenedor {
     width: 40%;
-    height: 75 vh;
+    margin-bottom: 5%;
   }
   body .contenedor .lugar_foto {
     display: flex;
