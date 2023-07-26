@@ -24,7 +24,7 @@ class SweetAlert {
     //Alerta que arroja si quiero vaciar el local y ya se encuentra vacío.
     sinDatosAlert = () => {
         Swal.fire({
-            title: 'Oops...',
+            title: 'Upss...',
             text: 'No hay claves almacenadas para poder eleminar!!',
             icon: 'warning',
         })

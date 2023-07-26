@@ -4,7 +4,7 @@ class Controlador extends Clave {
   
   clave_generada = '';
   //Función para validar la longitud de cada clave.
-  validar_longitud = (longitud_clave) => { 
+  validar_longitud = (longitud_clave,radioActivado) => { 
     //Instancio un objeto de tipo Controlador que hereda los métodos de Clave
     const obgValidador = new Controlador();
     /*Ejecuto la función "validarNumeroEntero" con el objeto "claveValida". La función está heredada de la clase "Clave".
@@ -35,7 +35,7 @@ class Controlador extends Clave {
       else{
           /*genero la variable "clave_generada" y ejecuto la función "generarCadenaAleatoria" heredada de "Clave".
           La propiedad "SUPER" se utiliza para llamar a una función desde una clase HIJA (llama función de la clase Padre - Super).*/
-        const clave_generada = super.generarCadenaAleatoria(longitud_clave);
+        const clave_generada = super.generarCadenaAleatoria(longitud_clave,radioActivado);
         
         return clave_generada;        
       }

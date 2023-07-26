@@ -83,20 +83,32 @@ body {
                 align-items: center;
             }
             .contenido{
+                display: flex;
+                flex-direction: column;
                 align-items: center;
+                margin-top: 10px;
                 
-                label{
-                    margin-bottom: 20px;
-                }
                 input{
-                    margin-bottom: 20px;
-                    margin-left: 18%;
                     height: 40px;
                     text-align: center;
                 }
-                h4{
+                .btns{
                     margin-bottom: 20px;
+                    margin-top: 20px;
                 }
+                .form-label{
+                    margin-bottom: 30px;
+                    margin-top: 10px;
+                }
+            }
+            .radio{
+                padding-top: 10px;
+                div{
+                    label{
+                        display: block;
+                    }
+                }
+
             }
             //btn-generar
             button{
@@ -216,16 +228,14 @@ body {
         background-color: #2bd51f;
         transition: $transicion;
     }
- 
-    @media (max-width: 560px) {
+    @media (max-width: 486px) {
         //claves
         .form-container{
             margin: 5px 0;
             height: 100% !important;          
             form{
                 width: 85% !important;
-                height: 125% !important;
-                margin-top: 100px;
+                height: 90% !important;
                 .div{
                     margin-top: 20px;
                     display: flex !important;
@@ -252,6 +262,9 @@ body {
                 }
             }
         }
+        #ciudad{
+            margin-top: 15px;
+        }
         //usuarios
         .contenedor {
             
@@ -276,7 +289,69 @@ body {
         }
     
     }
-    @media (max-width: 616px) {
+
+    @media (min-width: 487px) and (max-width: 560px) {
+        //claves
+        .form-container{
+            margin: 5px 0;
+            height: 100% !important;          
+            form{
+                width: 85% !important;
+                height: 80% !important;
+                .div{
+                    margin-top: 20px;
+                    display: flex !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                    padding-right: 25px !important;
+                }
+                .btns{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button{
+                        width: 130px !important;
+                        font-size: 15px;
+                    }                
+                }
+                .contenido{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        #ciudad{
+            margin-top: 15px;
+        }
+        //usuarios
+        .contenedor {
+            
+            margin-bottom: 10%;
+            .lugar_foto{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+            .datos{
+                margin: 0;
+                padding: 0;
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+    
+    }
+    @media (min-width: 561px) and (max-width: 616px) {
         //claves
         .form-container {
             display: flex; /* Utilizamos flexbox */
@@ -284,8 +359,9 @@ body {
             justify-content: center; /* Centramos horizontalmente */
             height: 60% !important;
                 form {
+                    margin-top: 10%;
                     width: 92% !important;
-                    height: 55%;
+                    height: 85%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;
@@ -326,8 +402,8 @@ body {
             justify-content: center; /* Centramos horizontalmente */
             height: 90%;
                 form {
-                    width: 80%;
-                    height: 45%;
+                    width: 85%;
+                    height: 65%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;
@@ -370,7 +446,7 @@ body {
             height: 90%;
                 form {
                     width: 65%;
-                    height: 45%;
+                    height: 65%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;
@@ -412,8 +488,8 @@ body {
             justify-content: center; /* Centramos horizontalmente */
             height: 90%;
                 form {
-                    width: 45%;
-                    height: 45%;
+                    width: 55%;
+                    height: 65%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;
@@ -448,15 +524,15 @@ body {
             }
         }
     }
-    @media (min-width: 1201px) and (max-width: 1900px) {
+    @media (min-width: 1201px) and (max-width: 1595px) {
         .form-container {
             display: flex; /* Utilizamos flexbox */
             align-items: center; /* Centramos verticalmente */
             justify-content: center; /* Centramos horizontalmente */
             height: 90%;
                 form {
-                    width: 45%;
-                    height: 45%;
+                    width: 55%;
+                    height: 65%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;

@@ -23,12 +23,23 @@
   <!--Inicio formulario-->
   <div class="form-container">
     <form id="formulario">
-      <!-- <h1 id="titulo">Generador de claves aleatorias</h1> -->
-      <h1></h1>
+
       <div class="mb-3 contenido">
-          <h4 for="exampleInputEmail1" class="form-label">Ingrese la cantidad de claves a generar</h4>
+          <h4 for="exampleInputEmail1" class="form-label">Ingrese la cantidad de claves que desea generar</h4>
           <input id="TxtCantidad" type="text" class="form-control" placeholder="Ingrese la cantidad..." >
       </div>
+      
+       <!-- Agregar los radio buttons  --> 
+       <div class="radio"> 
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="opcion" id="radio1" value="opcion1" checked style="width: 18px !important; height: 17px;">
+            <label class="form-check-label" for="radioOpcion1" style="margin-right: 20px;">Alfanumérica</label>
+          </div>
+          <div class="form-check form-check-inline" style="margin-bottom: 10px !important;">
+            <input class="form-check-input" type="radio" name="opcion" id="radio2" value="opcion2" style="width: 17px !important; height: 17px;">
+            <label class="form-check-label" for="radioOpcion2">Todos los caracteres</label>
+          </div>
+        </div>    
       <div class="btns">
         <button id="idBtnGenerarClave" type="submit" class="btn btn-primary"  data-bs-toggle="modal">Generar Clave</button>
         <button id="idBtnMostrarClaves" class="btn btn-primary">Mostrar Claves</button>

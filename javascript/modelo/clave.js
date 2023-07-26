@@ -1,8 +1,15 @@
 
 class Clave {
 
-  generarCadenaAleatoria(longitud) {
-      let caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&/()';//Caracteres que pueden estar disponible en la generación de clave.
+  generarCadenaAleatoria(longitud,radioActivado){
+      let radio = radioActivado;
+      let caracteres;
+      if (radio === 'radio1' || radio === '') {
+        caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      }else{
+        caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!"#$%&/=*-+.°|¬^{}[]~';//Caracteres que pueden estar disponible en la generación de clave.
+      }
+      
       let cadenaAleatoria = '';//declaro la cadena que se va a generar.
       //el ver va desde 0 hasta que i sea menor a longitud.
       for (let i = 0; i < longitud; i++) {

@@ -38,6 +38,19 @@ const crearClaves = async () => {
     //Fin de limpieza de modales.
         let cantidad = document.getElementById("TxtCantidad").value;
         let claves_a_generar = objCantidad.validar_cantidad_claves(cantidad);
+        let radio1 = document.getElementById("radio1");
+        let radio2 = document.getElementById("radio2");
+        let radioActivado;
+
+        if (radio1.checked) {
+            radioActivado = 'radio1';
+        }else if (radio2.checked){
+            radioActivado = 'radio2';
+        }else{
+            radioActivado = 'radio1';
+        }
+        console.log(radioActivado);
+
     if (claves_a_generar === true){
         let i = 0;
         let longitud_clave = [];
@@ -58,7 +71,7 @@ const crearClaves = async () => {
             let array_de_claves=[];
             for (let i = 0; i < cantidad; i++) {
                 lastID++;
-                array_de_claves[i] = objClave.validar_longitud(longitud_clave[i]);
+                array_de_claves[i] = objClave.validar_longitud(longitud_clave[i],radioActivado);
                 numeroItem[i] = document.createElement("li");
                 numeroItem[i].textContent = array_de_claves[i];
                 numerosLista.appendChild(numeroItem[i]);

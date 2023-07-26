@@ -63,19 +63,28 @@ body .form-container form div label {
   align-items: center;
 }
 body .form-container form .contenido {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-}
-body .form-container form .contenido label {
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 body .form-container form .contenido input {
-  margin-bottom: 20px;
-  margin-left: 18%;
   height: 40px;
   text-align: center;
 }
-body .form-container form .contenido h4 {
+body .form-container form .contenido .btns {
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+body .form-container form .contenido .form-label {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+body .form-container form .radio {
+  padding-top: 10px;
+}
+body .form-container form .radio div label {
+  display: block;
 }
 body .form-container form button {
   border: solid black 1px !important;
@@ -183,15 +192,14 @@ body button:hover {
   background-color: #2bd51f;
   transition: 0.7s;
 }
-@media (max-width: 560px) {
+@media (max-width: 486px) {
   body .form-container {
     margin: 5px 0;
     height: 100% !important;
   }
   body .form-container form {
     width: 85% !important;
-    height: 125% !important;
-    margin-top: 100px;
+    height: 90% !important;
   }
   body .form-container form .div {
     margin-top: 20px;
@@ -217,6 +225,9 @@ body button:hover {
   body .form-container form .contenido input {
     margin: 0;
   }
+  body #ciudad {
+    margin-top: 15px;
+  }
   body .contenedor {
     margin-bottom: 10%;
   }
@@ -238,7 +249,64 @@ body button:hover {
     font-size: 17px;
   }
 }
-@media (max-width: 616px) {
+@media (min-width: 487px) and (max-width: 560px) {
+  body .form-container {
+    margin: 5px 0;
+    height: 100% !important;
+  }
+  body .form-container form {
+    width: 85% !important;
+    height: 80% !important;
+  }
+  body .form-container form .div {
+    margin-top: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-right: 25px !important;
+  }
+  body .form-container form .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .btns button {
+    width: 130px !important;
+    font-size: 15px;
+  }
+  body .form-container form .contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .form-container form .contenido input {
+    margin: 0;
+  }
+  body #ciudad {
+    margin-top: 15px;
+  }
+  body .contenedor {
+    margin-bottom: 10%;
+  }
+  body .contenedor .lugar_foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  body .contenedor .lugar_foto img {
+    width: 90px;
+    height: 90px;
+  }
+  body .contenedor .datos {
+    margin: 0;
+    padding: 0;
+  }
+  body .contenedor .datos p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 561px) and (max-width: 616px) {
   body .form-container {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
@@ -246,8 +314,9 @@ body button:hover {
     height: 60% !important;
   }
   body .form-container form {
+    margin-top: 10%;
     width: 92% !important;
-    height: 55%;
+    height: 85%;
     padding: 20px;
     background: #ffffff;
     border-radius: 4px;
@@ -283,8 +352,8 @@ body button:hover {
     height: 90%;
   }
   body .form-container form {
-    width: 80%;
-    height: 45%;
+    width: 85%;
+    height: 65%;
     padding: 20px;
     background: #ffffff;
     border-radius: 4px;
@@ -322,7 +391,7 @@ body button:hover {
   }
   body .form-container form {
     width: 65%;
-    height: 45%;
+    height: 65%;
     padding: 20px;
     background: #ffffff;
     border-radius: 4px;
@@ -359,8 +428,8 @@ body button:hover {
     height: 90%;
   }
   body .form-container form {
-    width: 45%;
-    height: 45%;
+    width: 55%;
+    height: 65%;
     padding: 20px;
     background: #ffffff;
     border-radius: 4px;
@@ -389,7 +458,7 @@ body button:hover {
     font-size: 18px;
   }
 }
-@media (min-width: 1201px) and (max-width: 1900px) {
+@media (min-width: 1201px) and (max-width: 1595px) {
   body .form-container {
     display: flex; /* Utilizamos flexbox */
     align-items: center; /* Centramos verticalmente */
@@ -397,8 +466,8 @@ body button:hover {
     height: 90%;
   }
   body .form-container form {
-    width: 45%;
-    height: 45%;
+    width: 55%;
+    height: 65%;
     padding: 20px;
     background: #ffffff;
     border-radius: 4px;
