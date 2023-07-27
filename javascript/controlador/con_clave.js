@@ -80,21 +80,62 @@ class Controlador extends Clave {
     numerosLista.innerHTML = ""; // Limpio la lista antes de agregar las claves
     // Recorrer el array de claves obtenido del localStorage
     todasLasClaves.forEach((claveObj) => {
+        // Crear el contenedor de la clave y el icono de copiar
+        const claveContainer = document.createElement("div");
+        claveContainer.classList.add("clave-container");
+
+        // Crear el elemento para mostrar la clave
+        const claveText = document.createElement("span");
+        claveText.classList.add("clave-text");
+        claveText.textContent = claveObj.clave;
+
+        // Crear el icono de copiar
+        const iconoCopiar = document.createElement("a");
+        iconoCopiar.setAttribute("href", "#");
+        iconoCopiar.classList.add("icono-copiar");
+        iconoCopiar.innerHTML = '<i class="far fa-clone"></i>';
+        iconoCopiar.addEventListener("click", () => copiarAlPortapapeles(claveObj.clave));
+
+        // Agregar la clave y el icono al contenedor
+        claveContainer.appendChild(claveText);
+        claveContainer.appendChild(iconoCopiar);
+
+        // Crear el elemento li
         const numeroItem = document.createElement("li");
-        numeroItem.textContent = claveObj.clave;
+        // Agregar el contenedor con la clave y el icono al elemento li
+        numeroItem.appendChild(claveContainer);
+
+        // Agregar el elemento li a la lista
         numerosLista.appendChild(numeroItem);
     });
+
     // Mostrar el modal
     const modal = new bootstrap.Modal(document.getElementById("exampleModal"));
-    let lastID = parseInt(localStorage.getItem("lastID"));//Obtengo el id 0, si es 0, está vacío el localStore.
+    let lastID = parseInt(localStorage.getItem("lastID")); //Obtengo el id 0, si es 0, está vacío el localStore.
     if (lastID === 0) {
-      const numeroItem = document.createElement("p");
-      numeroItem.innerHTML = `En el sistema, no hay claves almacenadas.<br>
-                              Deberá generar nuevas claves!!! 
-                              &#128517; `;
-      numerosLista.appendChild(numeroItem);
+        const numeroItem = document.createElement("p");
+        numeroItem.innerHTML = `En el sistema, no hay claves almacenadas.<br>
+                                  Deberá generar nuevas claves!!! 
+                                  &#128517; `;
+        numerosLista.appendChild(numeroItem);
     }
     modal.show();
-  }
+  
+    // Función para copiar al portapapeles
+    const copiarAlPortapapeles = (texto) => {
+      navigator.clipboard.writeText(texto)
+        .then(() => {
+          console.log('Texto copiado al portapapeles:', texto);
+          // Aquí puedes agregar una notificación o cualquier otra lógica adicional después de copiar.
+        })
+        .catch(err => {
+          console.error('Error al copiar al portapapeles:', err);
+          // Aquí puedes manejar el error si es necesario.
+        }); 
+    }
+}
+
+
+
 }
 export default Controlador;//Exporto la clase "Controlador"

@@ -1,0 +1,9 @@
+.clave-item {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.icono-copiar {
+    margin-left: 20px; /* Espaciado entre la clave y el icono */
+}
