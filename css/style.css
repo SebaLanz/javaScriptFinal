@@ -200,6 +200,9 @@ body button:hover {
   transition: 0.7s;
 }
 @media (max-width: 486px) {
+  body .titulo .h1_usuario {
+    font-size: 25px;
+  }
   body .form-container {
     margin: 5px 0;
     height: 100% !important;

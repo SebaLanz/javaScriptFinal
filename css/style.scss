@@ -238,6 +238,11 @@ body {
         transition: $transicion;
     }
     @media (max-width: 486px) {
+        .titulo{
+            .h1_usuario{
+                font-size: 25px;
+            }
+        }
         //claves
         .form-container{
             margin: 5px 0;
