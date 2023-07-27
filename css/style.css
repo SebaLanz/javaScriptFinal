@@ -201,7 +201,7 @@ body button:hover {
 }
 @media (max-width: 486px) {
   body .titulo .h1_usuario {
-    font-size: 20px;
+    font-size: 18px;
   }
   body .form-container {
     margin: 5px 0;
@@ -209,7 +209,7 @@ body button:hover {
   }
   body .form-container form {
     width: 85% !important;
-    height: 90% !important;
+    height: 95% !important;
   }
   body .form-container form .div {
     margin-top: 20px;
@@ -261,6 +261,9 @@ body button:hover {
   }
 }
 @media (min-width: 487px) and (max-width: 560px) {
+  body .titulo .h1_usuario {
+    font-size: 23px;
+  }
   body .form-container {
     margin: 5px 0;
     height: 100% !important;
