@@ -24,7 +24,8 @@ class Clave {
   validarNumeroEntero = (valor) => {
     let regex = /^\d+$/;
     return regex.test(valor);
-  } 
+  }
+  
 }
 
 export default Clave;//Exporto la clase "Clave"

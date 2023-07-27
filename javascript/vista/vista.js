@@ -47,9 +47,8 @@ const crearClaves = async () => {
         }else if (radio2.checked){
             radioActivado = 'radio2';
         }else{
-            radioActivado = 'radio1';
+            radioActivado = 'radio1';//lo pongo default
         }
-        console.log(radioActivado);
 
     if (claves_a_generar === true){
         let i = 0;
@@ -63,7 +62,7 @@ const crearClaves = async () => {
             let lastID = parseInt(localStorage.getItem("lastID")) || 0;
             while ( i < cantidad) {
                 
-                longitud_clave[i] = await sweetBtn.solicitarNumero();
+                longitud_clave[i] = await sweetBtn.solicitarNumero(cantidad);
                 i++;
             }
             let numerosLista = document.getElementById("numeros-lista");
@@ -72,6 +71,7 @@ const crearClaves = async () => {
             for (let i = 0; i < cantidad; i++) {
                 lastID++;
                 array_de_claves[i] = objClave.validar_longitud(longitud_clave[i],radioActivado);
+                
                 numeroItem[i] = document.createElement("li");
                 numeroItem[i].textContent = array_de_claves[i];
                 numerosLista.appendChild(numeroItem[i]);

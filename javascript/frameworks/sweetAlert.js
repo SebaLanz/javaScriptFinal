@@ -30,7 +30,7 @@ class SweetAlert {
         })
     }
     //Alerta la cual reemplaza el prompt, la utilizo para pedir la longitud de cada clave.
-    async solicitarNumero() {
+    async solicitarNumero(cantidad) {
         const result = await Swal.fire({
             title: '<h4>Ingrese longitud de clave, mínimo 7 máximo 20</h4>',
             input: 'number',
@@ -63,14 +63,19 @@ class SweetAlert {
             }
         });
         if (result.isConfirmed) {
+            let titulo = 'Claves generadas exitosamente!!.';
+            if (cantidad  == 1) {
+                titulo = 'Clave generada exitosamente!!.';    
+            }
             Swal.mixin({
+                
                 toast: true,
                 position: 'top-end',
                 showConfirmButton: false,
                 timer: 3500 // 3 segundos y medio.
             }).fire({
                 icon: 'success',
-                title: 'Claves generadas exitosamente!!.'
+                title: titulo
             });
             // Convierto el valor en un entero y retorno el valor ingresado, el cual cumple todas las restricciones.
             return +result.value;

@@ -185,13 +185,22 @@ body {
             }
         }
     }
-    .h1_usuario{     
-        background: linear-gradient(to right, #1d5fe2, rgb(0, 179, 255));
+    .titulo{
+        background: linear-gradient(to bottom, #74ACDF 30%, #FFFFFF 30%, #FFFFFF 70%, #74ACDF 70%);
         margin: 0px;
-        text-align: center;
-        color: aliceblue;
+        justify-content: center;
+        color: #dbdb14;
         padding: 5px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        
+        .h1_usuario{     
+            font-size: 30px;
+            margin: 0;
+        }
     }
+    
     .datos{
         p {
             font-size: 23px;

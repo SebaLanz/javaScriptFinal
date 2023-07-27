@@ -80,6 +80,12 @@ class Controlador extends Clave {
     numerosLista.innerHTML = ""; // Limpio la lista antes de agregar las claves
     // Recorrer el array de claves obtenido del localStorage
     todasLasClaves.forEach((claveObj) => {
+      
+      if (claveObj.clave === 'Omitió ingresar un valor.') {
+        //No genero un li con el siguiente texto 'Omitió ingresar un valor.'
+      }
+      else{
+
         // Crear el contenedor de la clave y el icono de copiar
         const claveContainer = document.createElement("div");
         claveContainer.classList.add("clave-container");
@@ -107,6 +113,7 @@ class Controlador extends Clave {
 
         // Agregar el elemento li a la lista
         numerosLista.appendChild(numeroItem);
+      }
     });
 
     // Mostrar el modal
@@ -125,7 +132,15 @@ class Controlador extends Clave {
     const copiarAlPortapapeles = (texto) => {
       navigator.clipboard.writeText(texto)
         .then(() => {
-          console.log('Texto copiado al portapapeles:', texto);
+          Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3500 // 3 segundos y medio.
+          }).fire({
+              icon: 'success',
+              title: `La clave ${texto} fué copiada.`
+          });
           // Aquí puedes agregar una notificación o cualquier otra lógica adicional después de copiar.
         })
         .catch(err => {
