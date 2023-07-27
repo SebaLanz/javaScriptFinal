@@ -244,7 +244,7 @@ body {
             height: 100% !important;          
             form{
                 width: 85% !important;
-                height: 90% !important;
+                height: 95% !important;
                 .div{
                     margin-top: 20px;
                     display: flex !important;
@@ -307,7 +307,7 @@ body {
             height: 100% !important;          
             form{
                 width: 85% !important;
-                height: 80% !important;
+                height: 90% !important;
                 .div{
                     margin-top: 20px;
                     display: flex !important;
@@ -371,7 +371,7 @@ body {
                 form {
                     margin-top: 10%;
                     width: 92% !important;
-                    height: 85%;
+                    //height: 85%;
                     padding: 20px;
                     background: #ffffff;
                     border-radius: 4px;
@@ -409,7 +409,7 @@ body {
             margin-bottom: 15px;
         }
     }
-    @media (min-width: 617px) and (max-width: 768px) {
+    @media (min-width: 617px) and (max-width: 802px) {
         .form-container {
             display: flex; /* Utilizamos flexbox */
             align-items: center; /* Centramos verticalmente */
@@ -452,7 +452,7 @@ body {
             }
         }
     }
-    @media (min-width: 769px) and (max-width: 1098px) {
+    @media (min-width: 803px) and (max-width: 1098px) {
         .form-container {
             display: flex; /* Utilizamos flexbox */
             align-items: center; /* Centramos verticalmente */
